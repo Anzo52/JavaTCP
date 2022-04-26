@@ -9,7 +9,7 @@ public class TCPServer {
 	private DataInputStream in	 = null;
 
 	// constructor with port
-	public Server(int port) {
+	public TCPServer(int port) {
 		// starts server and waits for a connection
 		try {
 			server = new ServerSocket(port);
@@ -47,6 +47,6 @@ public class TCPServer {
 	}
 
 	public static void main(String args[]) {
-		Server server = new Server(5000);
+		TCPServer server = new TCPServer(5000);
 	}
 }
