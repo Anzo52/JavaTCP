@@ -12,6 +12,11 @@ Waiting for a client...
 Open a separate terminal:
 ```
 $ java TCPClient
+Connected
+```
+The server terminal will print:
+```
+Client accepted
 ```
 Once connection is established, you can send a message.
 To end connection type ```Over```
