@@ -7,6 +7,7 @@ public class TCPServer {
 	private Socket		 socket = null;
 	private ServerSocket server = null;
 	private DataInputStream in	 = null;
+	private static TCPServer server2;
 
 	// constructor with port
 	public TCPServer(int port) {
@@ -46,7 +47,15 @@ public class TCPServer {
 		}
 	}
 
+	public static TCPServer getServer2() {
+		return server2;
+	}
+
+	public static void setServer2(TCPServer server2) {
+		TCPServer.server2 = server2;
+	}
+
 	public static void main(String args[]) {
-		TCPServer server = new TCPServer(5000);
+		setServer2(new TCPServer(5000));
 	}
 }
